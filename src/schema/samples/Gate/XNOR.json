@@ -1,0 +1,5 @@
+{
+  "gateType": "XNOR",
+  "inPins": ["A", "B"],
+  "outPins": ["C"]
+}

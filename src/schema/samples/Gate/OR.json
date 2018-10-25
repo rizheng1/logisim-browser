@@ -1,0 +1,5 @@
+{
+  "gateType": "OR",
+  "inPins": ["in1", "in2"],
+  "outPins": ["out"]
+}

@@ -1,0 +1,5 @@
+{
+  "gateType": "AND",
+  "inPins": ["A", "B"],
+  "outPins": ["C"]
+}

@@ -1,0 +1,5 @@
+{
+  "gateType": "SPLIT",
+  "inPins": ["A", "B", "C"],
+  "outPins": ["A", "B", "C"]
+}

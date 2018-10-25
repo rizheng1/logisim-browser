@@ -1,0 +1,5 @@
+{
+  "gateType": "WIRE",
+  "inPins": ["A", "B"],
+  "outPins": ["A", "B"]
+}

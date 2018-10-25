@@ -1,0 +1,5 @@
+{
+  "gateType": "NOT",
+  "inPins": ["Q"],
+  "outPins": ["notQ"]
+}
