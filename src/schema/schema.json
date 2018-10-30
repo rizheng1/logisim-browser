@@ -1,5 +1,30 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+        "gates": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Gate"
+            }
+        },
+        "positions": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/definitions/Position"
+            }
+        },
+        "connections": {
+        "type": "array",
+            "items": {
+                "$ref": "#/definitions/Connection"
+            }
+        }
+    },
+    "required": [
+        "connections",
+        "gates",
+        "positions"
+    ],
     "definitions": {
         "Position": {
             "type": "object",
@@ -111,36 +136,6 @@
                 "pins"
             ],
             "title": "Reference"
-        },
-        "Circuit": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "gates": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Gate"
-                    }
-                },
-                "positions": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "$ref": "#/definitions/Position"
-                    }
-                },
-                "connections": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Connection"
-                    }
-                }
-            },
-            "required": [
-                "connections",
-                "gates",
-                "positions"
-            ],
-            "title": "Circuit"
         },
         "Connection": {
             "type": "object",
