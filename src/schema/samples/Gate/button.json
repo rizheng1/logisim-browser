@@ -1,0 +1,7 @@
+{
+  "gateType": "BUTTON",
+  "inPins": [],
+  "outPins": ["O"],
+  "interactive": true,
+  "interactiveType": "pulse"
+}

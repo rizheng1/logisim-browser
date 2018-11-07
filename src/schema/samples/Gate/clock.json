@@ -1,0 +1,6 @@
+{
+  "gateType": "CLOCK",
+  "inPins": [],
+  "outPins": ["O"],
+  "pattern": "10"
+}

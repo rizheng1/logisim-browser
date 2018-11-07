@@ -1,0 +1,5 @@
+{
+  "gateType": "NAND",
+  "inPins": ["A", "B"],
+  "outPins": ["C"]
+}

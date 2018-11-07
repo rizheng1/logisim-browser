@@ -1,0 +1,6 @@
+{
+  "gateType": "CUSTOM",
+  "inPins": ["X", "Y"],
+  "outPins": ["Z"],
+  "logic": "(AND (X Y) Z)"
+}

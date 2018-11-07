@@ -1,0 +1,5 @@
+{
+  "gateType": "XOR",
+  "inPins": ["X", "Y"],
+  "outPins": ["Z"]
+}

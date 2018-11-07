@@ -1,0 +1,5 @@
+{
+  "gateType": "NOR",
+  "inPins": ["A", "B"],
+  "outPins": ["C"]
+}

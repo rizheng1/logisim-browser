@@ -1,0 +1,7 @@
+{
+  "gateType": "SWITCH",
+  "inPins": [],
+  "outPins": ["O"],
+  "interactive": true,
+  "interactiveType": "onoff"
+}
