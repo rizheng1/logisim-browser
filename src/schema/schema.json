@@ -1,0 +1,157 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+        "gates": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Gate"
+            }
+        },
+        "positions": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/definitions/Position"
+            }
+        },
+        "connections": {
+        "type": "array",
+            "items": {
+                "$ref": "#/definitions/Connection"
+            }
+        }
+    },
+    "required": [
+        "connections",
+        "gates",
+        "positions"
+    ],
+    "definitions": {
+        "Position": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                },
+                "z": {
+                    "type": "integer"
+                },
+                "width": {
+                    "type": "number"
+                },
+                "height": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "x",
+                "y"
+            ],
+            "title": "Position"
+        },
+        "Gate": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "gateType": {
+                    "type": "string",
+                    "enum": [
+                        "AND",
+                        "NAND",
+                        "NOR",
+                        "NOT",
+                        "OR",
+                        "XNOR",
+                        "XOR",
+                        "BUTTON",
+                        "CLOCK",
+                        "CUSTOM",
+                        "DIODE",
+                        "SPLIT",
+                        "SWITCH",
+                        "WIRE"
+                    ]
+                },
+                "inPins": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "outPins": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "interactive": {
+                    "type": "boolean"
+                },
+                "interactiveType": {
+                    "type": "string",
+                    "enum": [
+                        "onoff",
+                        "pulse"
+                    ]
+                },
+                "pattern": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "logic": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "gateType",
+                "inPins",
+                "outPins"
+            ],
+            "title": "Gate"
+        },
+        "Reference": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "pins": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "pins"
+            ],
+            "title": "Reference"
+        },
+        "Connection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "connect": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Reference"
+                    }
+                }
+            },
+            "required": [
+                "connect"
+            ],
+            "title": "Connection"
+        }
+    }
+}
