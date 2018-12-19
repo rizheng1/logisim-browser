@@ -71,7 +71,7 @@ function LogicSim()
 			Saving.save();
 		}));
 		grp.addItem(new Button.Tool(images.open, function() {
-			Saving.loadFromPrompt();
+			window.open('open.html');
 		}));
 		myDeleteBtn = grp.addItem(new Button.Tool(images.delete, function() {
 			if (logicSim.mode == ControlMode.deleting)
